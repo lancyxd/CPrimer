@@ -1,6 +1,13 @@
 #include<iostream>
-bool compare(int* const b1,int* const b2,int* const e1,int* const e2);
+#include<string>
+#include<cstring>
+
 using namespace std;
+
+bool compare(int* const b1,int* const b2,int* const e1,int* const e2);
+void comparestring(string a,string b);
+void compareCstring(const char* cs1,const char* cs2);
+
 int main()
 {
 	string nums[]={"one","two","three"};
@@ -36,6 +43,19 @@ int main()
 
     cout << "==========" << endl;
 
+	//string
+	char ca[]={'C','+','+'};
+	cout<<strlen(ca)<<endl;;//error，ca必须以空字符结束
+	
+	//指针相加在c++中是禁止的，可以指针相减
+	//3.39
+	string a("hello");
+	string b("hhllo");
+	comparestring(a,b);
+
+	const char* cs1="happy";
+	const char* cs2="hoppy";
+	compareCstring(cs1,cs2);
 return 0;
 }
 
@@ -57,7 +77,31 @@ bool compare(int* const b1,int* const b2,int* const e1,int* const e2)
 }
 
 
+//3.39
+void comparestring(string a,string b)
+{
+	if(a==b)
+		cout<<"equal"<<endl;
+	if(a>b)
+		cout<<a<<" is bigger than "<<b<<endl;
+	if(a<b)
+		cout<<a<<" is smaller than "<<b<<endl;
+}
+
+void compareCstring(const char* cs1,const char* cs2)
+{
+	auto result =strcmp(cs1,cs2);
+	if(result==0)
+		cout<<"equal"<<endl;
+	else if(result>0)
+		cout<<cs1<<" bigger than "<<cs2<<endl;
+	else
+		cout<<cs1<<" smaller than "<<cs2<<endl;
+}
 /*
 数组维度必须为一常量;
 char st[11] = "fundamental";  // illegal, the string's size is 12.
 */
+
+
+
