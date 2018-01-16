@@ -22,8 +22,8 @@ using namespace std;
 
 
 g++编译多个文件采用makefile：
-g++ -c APCluster.cppAPCluster.h //生成APCluster.o 中间文件
-g++ -c example.cppAPCluster.h  //生成example.o中间文件
+g++ -c APCluster.cpp APCluster.h //生成APCluster.o 中间文件
+g++ -c example.cpp  APCluster.h  //生成example.o中间文件
 g++ -o main APCluster.o example.o
 
 
@@ -95,6 +95,11 @@ static静态成员:静态数据成员属于整个类，即使没有任何对象�
 普通成员:属于类的一个具体的对象，只有对象被创建了，普通数据成员才会被分配内存。
 
 类的两项基本能力:数据抽象(定义数据成员和函数成员的能力)和封装(保护类的成员不被随意访问的能力，设为private)
+
+
+迭代器种类：input、output、forward、bidirectional(双向)、random access
+list双向迭代器
+vector随机迭代器
 
 
 
