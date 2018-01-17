@@ -101,6 +101,12 @@ static静态成员:静态数据成员属于整个类，即使没有任何对象�
 list双向迭代器
 vector随机迭代器
 
+list : anytime when a doubly-linked list is required.
+vector : anytime when a dynamic array is required.
+deque : An answer from SO.
+map : dictionary.
+set : when to keep elements sorted and unique.
+
 
 
 
