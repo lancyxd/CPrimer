@@ -75,7 +75,8 @@ const int  *const *const *pppi = &ppi; //底层const
 assert预处理宏
 
 构造函数：类通过一个或几个特殊的成员函数来控制其初始化的过程，这些函数叫构造函数。特点：以类名作为函数名，无返回类型。可以重载
-默认构造函数:
+默认构造函数:defult
+拷贝构造函数是一种特殊的构造函数，函数的名称必须和类名称一致，它必须的一个参数是本类型的一个引用变量。
 析构函数:
 成员后函数:
 
@@ -106,6 +107,15 @@ vector : anytime when a dynamic array is required.
 deque : An answer from SO.
 map : dictionary.
 set : when to keep elements sorted and unique.
+
+
+内存泄露:内存一直增长，忘记释放了。
+智能指针:share_ptr,unique_ptr,weak_ptr
+
+基类:层次关系的根部
+派生类:直接或间接从基类继承而来的
+private member: base class itself and friend can access
+protected members: base class itself, friend and derived classes can access
 
 
 
